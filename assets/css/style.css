@@ -39,6 +39,7 @@ h1 {
   );
   background-size: 200% 200%;
   border-radius: 5rem 5rem 0 0;
+  border: 0.8px solid rgba(128, 248, 206, 0.5);
   padding: 3rem 0 0 3rem;
   animation: headline 5s ease-in-out infinite;
 }
@@ -110,7 +111,7 @@ div {
 }
 
 figure {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2.5rem 0;
 }
 
 input[type="number"],
@@ -156,8 +157,7 @@ input[type="submit"]:hover {
   color: var(--black);
 }
 
-label[for="aktivität"],
-label[for="körperbau"] {
+label[for="aktivität"] {
   display: block;
   margin: 0 0 1rem 0;
 }
