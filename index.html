@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Kalorienrechner</h1>
+
+        <article>
+          <form onsubmit="rechnung(); return false">
+            <div>
+              <label for="körpergröße">Körpergröße in cm</label>
+              <input
+                type="number"
+                id="körpergröße"
+                step="0.5"
+                placeholder="170"
+                min="0"
+                max="250"
+                required
+              />
+            </div>
+            <div>
+              <label for="alter">Alter</label>
+              <input
+                type="number"
+                id="alter"
+                step="1"
+                min="0"
+                max="115"
+                placeholder="25"
+                required
+              />
+            </div>
+            <div>
+              <label for="gewicht">Gewicht in kg</label>
+              <input
+                type="number"
+                id="gewicht"
+                step="0.1"
+                min="0"
+                max="230"
+                placeholder="65"
+                required
+              />
+            </div>
+
+            <figure class="körper-fig">
+              <label for="körperbau">Körperbau</label>
+              <div class="körper-div">
+                <input type="radio" name="körperbau" id="weiblich" required />
+                <label for="weiblich">Weiblich</label>
+
+                <input type="radio" name="körperbau" id="männlich" required />
+                <label for="männlich">Männlich</label>
+              </div>
+            </figure>
+            <figure>
+              <label for="aktivität">Arbeits- und Freizeitaktivität</label>
+              <select name="" id="aktivität">
+                <option value="0.95">Schlafen</option>
+                <option value="1.2">Ausschließlich Sitzen oder Liegen</option>
+                <option value="1.5">
+                  Sitzende Tätigkeit mit wenig oder keiner körperlichen
+                  Aktivität
+                </option>
+                <option value="1.7">
+                  Sitzende Tätigkeit mit zeitweilig gehender oder stehender
+                  Tätigkeit
+                </option>
+                <option value="1.9">
+                  Überwiegend gehende oder stehende Tätigkeit
+                </option>
+                <option value="2.2">
+                  Körperlich anstrengende berufliche Arbeit
+                </option>
+              </select>
+            </figure>
+            <input type="submit" value="Berechne" />
+          </form>
+
+          <table>
+            <tr>
+              <th></th>
+              <th>kcal</th>
+              <th>kJ</th>
+            </tr>
+            <tr>
+              <td>Grundumsatz</td>
+              <td class="grund-kcal"></td>
+              <td class="grund-kj"></td>
+            </tr>
+            <tr>
+              <td>Gesamtumsatz</td>
+              <td class="gesamt-kcal"></td>
+              <td class="gesamt-kj"></td>
+            </tr>
+          </table>
+          <p>
+            Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen,
+            da es verschiedene Fehlermöglichkeiten gibt wie abweichender
+            Grundumsatz, falsche Zeiteinschätzung etc.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>

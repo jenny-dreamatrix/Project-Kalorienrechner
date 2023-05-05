@@ -1,0 +1,182 @@
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(128, 248, 206);
+  --secondary-color: rgba(26, 50, 42, 0.82);
+  --third-color: rgba(4, 10, 6, 0.661);
+  --black: rgb(0, 0, 0);
+  --text-color: rgb(165, 211, 195);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-family: "Roboto-Bold";
+  font-size: 4rem;
+  color: var(--text-color);
+  height: 10rem;
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color) 12%,
+    rgba(71, 138, 115, 0.82) 53%,
+    var(--primary-color) 100%
+  );
+  border-radius: 5rem 5rem 0 0;
+  padding: 2.5rem 0 0 3rem;
+}
+
+p,
+label,
+input,
+select,
+td,
+th {
+  font-family: "Roboto-Regular";
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+main {
+  height: 120vh;
+  background: radial-gradient(
+      circle,
+      var(--secondary-color) 12%,
+      var(--black) 100%
+    ),
+    url(../img/eugene-golovesov-wkb5BM3vlWY-unsplash.jpg) no-repeat center;
+  background-size: cover;
+  padding: 3rem 0 0 0;
+}
+
+article {
+  padding: 3rem;
+}
+
+section {
+  width: 50vw;
+  background-color: var(--third-color);
+  border-radius: 5rem;
+  margin: 0 auto;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1.5rem 0;
+}
+
+.körper-fig {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.körper-div {
+  margin: 0;
+}
+
+input[type="radio"] {
+  margin: 0 1rem 0 0;
+}
+
+figure {
+  margin: 0 0 1.5rem 0;
+}
+
+label {
+  margin: 0 1rem 0 0;
+}
+
+input[type="number"] {
+  height: 4rem;
+  width: 70%;
+  background-color: var(--black);
+  opacity: 0.5;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+input[type="submit"] {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--black);
+  /* opacity: 0.5; */
+  border: 1.5px solid var(--primary-color);
+  border-radius: 2rem;
+  margin: 0 0 2rem 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+input[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: var(--black);
+}
+
+label[for="körperbau"] {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+label[for="aktivität"] {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+select {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.5;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+table {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+  margin: 0 0 3rem 0;
+}
+
+th,
+td {
+  height: 4rem;
+  width: 25%;
+
+  padding: 1rem;
+}
+
+th:nth-of-type(1),
+th:nth-of-type(2),
+td:nth-of-type(1),
+td:nth-of-type(2) {
+  border-right: 0.5px solid rgba(128, 248, 206, 0.5);
+}
+
+th,
+tr:nth-of-type(2) td {
+  border-bottom: 0.5px solid rgba(128, 248, 206, 0.5);
+}
