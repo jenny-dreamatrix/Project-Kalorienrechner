@@ -85,7 +85,7 @@ article {
 }
 
 section {
-  width: 50vw;
+  width: 65rem;
   background-color: var(--third-color);
   border-radius: 5rem;
   margin: 0 auto;
