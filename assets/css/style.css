@@ -91,6 +91,8 @@ section {
   margin: 0 auto;
 }
 
+/* input & form */
+
 div {
   display: flex;
   align-items: center;
@@ -98,7 +100,36 @@ div {
   margin: 0 0 1.5rem 0;
 }
 
-/* input & form */
+input[type="number"],
+select {
+  height: 4rem;
+  background-color: var(--black);
+  opacity: 0.5;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="number"] {
+  width: 70%;
+}
+
+select {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+
+input[type="number"]:hover,
+select:hover {
+  background-color: var(--secondary-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+input[type="radio"],
+label {
+  margin: 0 1rem 0 0;
+}
 
 .körper-fig {
   display: flex;
@@ -114,30 +145,9 @@ figure {
   margin: 0 0 2.5rem 0;
 }
 
-input[type="number"],
-select {
-  height: 4rem;
-  background-color: var(--black);
-  opacity: 0.5;
-  border: none;
-  border-radius: 2rem;
-  padding: 1rem;
-  transition: 0.3s ease-in-out;
-}
-
-select {
-  width: 100%;
+label[for="aktivität"] {
+  display: block;
   margin: 0 0 1rem 0;
-}
-
-input[type="number"] {
-  width: 70%;
-}
-
-input[type="number"]:hover,
-select:hover {
-  background-color: var(--secondary-color);
-  border: 1.5px solid var(--primary-color);
 }
 
 input[type="submit"] {
@@ -155,16 +165,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--primary-color);
   color: var(--black);
-}
-
-label[for="aktivität"] {
-  display: block;
-  margin: 0 0 1rem 0;
-}
-
-input[type="radio"],
-label {
-  margin: 0 1rem 0 0;
 }
 
 select,
