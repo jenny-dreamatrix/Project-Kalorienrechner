@@ -27,17 +27,20 @@ html {
 
 h1 {
   font-family: "Roboto-Bold";
-  font-size: 4rem;
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
   color: var(--text-color);
+  text-shadow: 2px 2px 5px var(--secondary-color);
   height: 10rem;
   background: linear-gradient(
-    45deg,
-    var(--secondary-color) 12%,
-    rgba(71, 138, 115, 0.82) 53%,
-    var(--primary-color) 100%
+    15deg,
+    var(--secondary-color) 1%,
+    var(--primary-color) 120%
   );
+  background-size: 200% 200%;
   border-radius: 5rem 5rem 0 0;
-  padding: 2.5rem 0 0 3rem;
+  padding: 3rem 0 0 3rem;
+  animation: headline 5s ease-in-out infinite;
 }
 
 p,
@@ -55,8 +58,17 @@ p {
   font-size: 1.4rem;
 }
 
+.grund-kcal,
+.grund-kj,
+.gesamt-kcal,
+.gesamt-kj {
+  font-family: "Roboto-Bold";
+}
+
+/* main styles */
+
 main {
-  height: 120vh;
+  height: 100vh;
   background: radial-gradient(
       circle,
       var(--secondary-color) 12%,
@@ -85,74 +97,87 @@ div {
   margin: 0 0 1.5rem 0;
 }
 
+/* input & form */
+
 .körper-fig {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .körper-div {
   margin: 0;
-}
-
-input[type="radio"] {
-  margin: 0 1rem 0 0;
 }
 
 figure {
   margin: 0 0 1.5rem 0;
 }
 
-label {
-  margin: 0 1rem 0 0;
-}
-
-input[type="number"] {
+input[type="number"],
+select {
   height: 4rem;
-  width: 70%;
   background-color: var(--black);
   opacity: 0.5;
   border: none;
   border-radius: 2rem;
   padding: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+select {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+
+input[type="number"] {
+  width: 70%;
+}
+
+input[type="number"]:hover,
+select:hover {
+  background-color: var(--secondary-color);
+  border: 1.5px solid var(--primary-color);
 }
 
 input[type="submit"] {
   height: 5rem;
   width: 100%;
-  background-color: var(--black);
-  /* opacity: 0.5; */
-  border: 1.5px solid var(--primary-color);
-  border-radius: 2rem;
-  margin: 0 0 2rem 0;
   color: var(--primary-color);
+  background-color: var(--black);
+  border-radius: 2rem;
+  border: 1.5px solid var(--primary-color);
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  margin: 0 0 2rem 0;
 }
+
 input[type="submit"]:hover {
   background-color: var(--primary-color);
   color: var(--black);
 }
 
+label[for="aktivität"],
 label[for="körperbau"] {
   display: block;
   margin: 0 0 1rem 0;
 }
 
-label[for="aktivität"] {
-  display: block;
-  margin: 0 0 1rem 0;
+input[type="radio"],
+label {
+  margin: 0 1rem 0 0;
 }
 
-select {
-  height: 4rem;
-  width: 100%;
-  background-color: var(--black);
-  opacity: 0.5;
-  border: none;
-  border-radius: 2rem;
-  padding: 1rem;
-  margin: 0 0 1rem 0;
+select,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
+
+input[type="radio"] {
+  accent-color: var(--primary-color);
+}
+
+/* tabelle */
 
 table {
   width: 100%;
@@ -165,7 +190,6 @@ th,
 td {
   height: 4rem;
   width: 25%;
-
   padding: 1rem;
 }
 
@@ -179,4 +203,23 @@ td:nth-of-type(2) {
 th,
 tr:nth-of-type(2) td {
   border-bottom: 0.5px solid rgba(128, 248, 206, 0.5);
+}
+
+td:nth-of-type(2),
+td:nth-of-type(3) {
+  text-align: center;
+}
+
+/* animations */
+
+@keyframes headline {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    font-size: 3.5rem;
+  }
+  50% {
+    background-position: 80% 50%;
+    font-size: 3.6rem;
+  }
 }
