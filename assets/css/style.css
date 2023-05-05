@@ -136,13 +136,13 @@ label {
   margin: 0 1rem 0 0;
 }
 
-.körper-fig {
+.geschlecht-fig {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.körper-div {
+.geschlecht-div {
   margin: 0;
 }
 
