@@ -27,9 +27,12 @@ html {
 
 h1 {
   font-family: "Roboto-Bold";
-  font-size: 3.5rem;
+  font-size: 5.5rem;
+  -webkit-text-stroke: 0.7px rgba(128, 248, 206, 0.753);
+  text-transform: uppercase;
   letter-spacing: 0.5rem;
-  color: var(--text-color);
+  text-align: center;
+  color: var(--third-color);
   text-shadow: 2px 2px 5px var(--secondary-color);
   height: 10rem;
   background: linear-gradient(
@@ -40,8 +43,8 @@ h1 {
   background-size: 200% 200%;
   border-radius: 5rem 5rem 0 0;
   border: 0.8px solid rgba(128, 248, 206, 0.5);
-  padding: 3rem 0 0 3rem;
-  animation: headline 5s ease-in-out infinite;
+  padding: 2rem 0 0 0;
+  animation: headline 4s ease-in-out infinite;
 }
 
 p,
@@ -66,7 +69,7 @@ p {
   font-family: "Roboto-Bold";
 }
 
-/* main styles */
+/* main */
 
 main {
   height: 100vh;
@@ -109,7 +112,7 @@ select {
   opacity: 0.5;
   border: none;
   border-radius: 2rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -218,11 +221,11 @@ td:nth-of-type(3) {
   0%,
   100% {
     background-position: 0% 50%;
-    font-size: 3.5rem;
+    font-size: 5.5rem;
   }
   50% {
     background-position: 80% 50%;
-    font-size: 3.6rem;
+    font-size: 5.55rem;
   }
 }
 
