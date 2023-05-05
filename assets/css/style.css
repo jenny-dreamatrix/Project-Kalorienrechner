@@ -84,11 +84,13 @@ article {
   padding: 3rem;
 }
 
-section {
+.rechner {
   width: 65rem;
   background-color: var(--third-color);
   border-radius: 5rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* input & form */
@@ -222,4 +224,30 @@ td:nth-of-type(3) {
     background-position: 80% 50%;
     font-size: 3.6rem;
   }
+}
+
+/* border effect */
+
+.border-effect {
+  position: relative;
+  width: 65.2rem;
+  height: 74.48rem;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 5rem;
+}
+
+.border-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0.5px;
+  background: radial-gradient(
+      circle,
+      var(--secondary-color) 55%,
+      var(--black) 100%
+    ),
+    url(../img/eugene-golovesov-wkb5BM3vlWY-unsplash.jpg) no-repeat center;
+  background-size: 190% 190%;
 }
