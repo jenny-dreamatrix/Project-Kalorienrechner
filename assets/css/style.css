@@ -72,7 +72,7 @@ p {
 /* main */
 
 main {
-  height: 100vh;
+  height: 110vh;
   background: radial-gradient(
       circle,
       var(--secondary-color) 12%,
